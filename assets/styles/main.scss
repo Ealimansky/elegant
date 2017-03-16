@@ -1,174 +1,8 @@
 //@import "normalize.scss";
 //@import "layout.scss";
-@import "variables.scss";
 
-@font-face {
-  font-family: "Bebas Neue";
-  src: url("../fonts/BebasNeue Light.ttf");
-  font-weight: 100;
-}
 
-@font-face {
-  font-family: "Bebas Neue";
-  src: url("../fonts/BebasNeue Regular.otf");
-  font-weight: 400;
-}
 
-@font-face {
-  font-family: "Bebas Neue";
-  src: url("../fonts/BebasNeue Bold.otf");
-  font-weight: 700;
-}
-
-body {
-  min-width: 320px;
-
-}
-
-.ba-elegant {
-  background: url("../images/hero-img.png") 50% no-repeat;
-  background-size: cover;
-  position: relative;
-  min-height: 100vh;
-
-}
-
-.ba-container {
-  padding: 0;
-  padding-bottom: 45px;
-  .ba-container-head {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: auto;
-    .logo {
-      background: url("../images/logo.png") 50% no-repeat;
-      /* Style for "Logo" */
-      width: 109px;
-      height: 18px;
-      display: block;
-      margin-top: 50px;
-    }
-  }
-}
-
-nav ul {
-  list-style-type: none;
-  margin-top: 45px;
-  li {
-    float: left;
-    padding-right: 50px;
-    display: block;
-    height: auto;
-
-    a {
-      text-decoration: none;
-      /* Style for "HELLO SERV" */
-      color: #fffefe;
-      font-family: Lato, sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 38px;
-      text-transform: uppercase;
-      padding: 0 0 10px 0;
-      display: block;
-      position: relative;
-      &:before {
-        display: block;
-        background-color: #fffefe;
-        position: absolute;
-        content: "";
-        left: 0;
-        right: 0;
-        height: 3px;
-        opacity: 0;
-        transform: translateX(-20px);
-        transition: transform .2s ease-in, opacity .2s ease-in;
-      }
-      &:hover:before {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  }
-  li:last-of-type {
-    padding-right: 83px;
-  }
-}
-
-.ba-banner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 190px;
-
-  h1 {
-    /* Style for "we’re crea" */
-    min-height: 37px;
-    color: #ffffff;
-    font-family: Raleway, sans-serif;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 60px;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  hr {
-    /* Style for "Shape 1" */
-    @include hr-white;
-  }
-  p {
-    /* Style for "Lorem ipsu" */
-    max-width: 596px;
-    min-height: 50px;
-    color: #fffefe;
-    font-family: Lato, sans-serif;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 30px;
-    text-align: center;
-
-  }
-}
-
-header .scroll {
-  /* Style for "Right Arro" */
-  width: 92px;
-  height: 92px;
-  background: url("../images/right-arrow-circular-button--attribute-as-robin-kylander-from-flaticon-com.svg") 50% no-repeat;
-  background-size: cover;
-  opacity: 0.5;
-  margin: 200px auto 0;
-  display: block;
-  position: relative;
-}
-
-@keyframes bounce {
-  0%, 20%, 60%, 100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
-  80% {
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
-  }
-}
-
-header .scroll:hover {
-  animation: bounce 1s;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  outline-color: rgba(255, 255, 255, 0);
-  outline-offset: 15px;
-}
-
-//--------------------------------------------end header
 
 .main__section--our-service {
   //min-height: 735px;
@@ -216,7 +50,7 @@ header .scroll:hover {
 }
 
 //--------------------------------------------end our service
-.main__section--dolore {
+.main__section--about-us {
   background: url("../images/-img-.png") 50% no-repeat, #222222;
   background-size: cover;
   min-height: 500px;
@@ -268,6 +102,10 @@ header .scroll:hover {
     font-weight: 400;
     line-height: 28px;
     text-decoration: underline;
+    &:hover{
+      color: #676767;
+
+    }
   }
 }
 
@@ -288,7 +126,7 @@ header .scroll:hover {
 
 //--------------------------------------------end dolore
 .main__section--our-work {
-display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   margin: auto;
@@ -355,9 +193,7 @@ display: flex;
   }
 }
 
-
-
-.our-work__card:hover .fon{
+.our-work__card:hover .fon {
   opacity: 0.3;
   transition: opacity .2s ease-in;
 }
@@ -367,12 +203,13 @@ display: flex;
   transition: visibility .2s ease-in;
 }
 
-.main__section--our-work button{
+.main__section--our-work button {
   /* Style for "Rectangle" */
   width: 370px;
   height: 60px;
   border: 3px solid #222222;
   margin: 79px auto 0;
+  margin-bottom: 80px;
   background-color: white;
   /* Style for "more" */
   color: #222222;
@@ -382,12 +219,11 @@ display: flex;
   line-height: 60px;
   text-transform: uppercase;
   letter-spacing: 1.7px;
-}
-//--------------------------------------end our work
+  &:hover{
+    border: 3px solid #676767;
+    color: #676767;
 
-footer{
-  /* Style for "bg" */
-background: url("../images/bg-footer.png")50% no-repeat;
-  min-height: 802px;
-  background-size: cover;
+  }
 }
+
+//--------------------------------------end our work

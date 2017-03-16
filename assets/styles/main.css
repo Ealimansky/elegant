@@ -1,333 +1,85 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "Bebas Neue";
-  src: url("../fonts/BebasNeue Light.ttf");
-  font-weight: 100; }
-@font-face {
-  font-family: "Bebas Neue";
-  src: url("../fonts/BebasNeue Regular.otf");
-  font-weight: 400; }
-@font-face {
-  font-family: "Bebas Neue";
-  src: url("../fonts/BebasNeue Bold.otf");
-  font-weight: 700; }
-body {
-  min-width: 320px; }
+/*
+Error: Undefined mixin 'h2'.
+        on line 11 of main.scss, in `h2'
+        from line 11 of main.scss
 
-.ba-elegant {
-  background: url("../images/hero-img.png") 50% no-repeat;
-  background-size: cover;
-  position: relative;
-  min-height: 100vh; }
+6: 
+7: .main__section--our-service {
+8:   //min-height: 735px;
+9:   h2 {
+10:     /* Style for "our servic" *\/
+11:     @include h2;
+12: 
+13:   }
+14:   hr {
+15:     /* Style for "Line sep" *\/
+16:     @include hr;
 
-.ba-container {
-  padding: 0;
-  padding-bottom: 45px; }
-  .ba-container .ba-container-head {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: auto; }
-    .ba-container .ba-container-head .logo {
-      background: url("../images/logo.png") 50% no-repeat;
-      /* Style for "Logo" */
-      width: 109px;
-      height: 18px;
-      display: block;
-      margin-top: 50px; }
-
-nav ul {
-  list-style-type: none;
-  margin-top: 45px; }
-  nav ul li {
-    float: left;
-    padding-right: 50px;
-    display: block;
-    height: auto; }
-    nav ul li a {
-      text-decoration: none;
-      /* Style for "HELLO SERV" */
-      color: #fffefe;
-      font-family: Lato, sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 38px;
-      text-transform: uppercase;
-      padding: 0 0 10px 0;
-      display: block;
-      position: relative; }
-      nav ul li a:before {
-        display: block;
-        background-color: #fffefe;
-        position: absolute;
-        content: "";
-        left: 0;
-        right: 0;
-        height: 3px;
-        opacity: 0;
-        transform: translateX(-20px);
-        transition: transform .2s ease-in, opacity .2s ease-in; }
-      nav ul li a:hover:before {
-        opacity: 1;
-        transform: translateY(0); }
-  nav ul li:last-of-type {
-    padding-right: 83px; }
-
-.ba-banner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 190px; }
-  .ba-banner h1 {
-    /* Style for "weтАЩre crea" */
-    min-height: 37px;
-    color: #ffffff;
-    font-family: Raleway, sans-serif;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 60px;
-    text-transform: uppercase;
-    text-align: center; }
-  .ba-banner hr {
-    /* Style for "Shape 1" */
-    width: 86px;
-    height: 2px;
-    background-color: #ffffff; }
-  .ba-banner p {
-    /* Style for "Lorem ipsu" */
-    max-width: 596px;
-    min-height: 50px;
-    color: #fffefe;
-    font-family: Lato, sans-serif;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 30px;
-    text-align: center; }
-
-header .scroll {
-  /* Style for "Right Arro" */
-  width: 92px;
-  height: 92px;
-  background: url("../images/right-arrow-circular-button--attribute-as-robin-kylander-from-flaticon-com.svg") 50% no-repeat;
-  background-size: cover;
-  opacity: 0.5;
-  margin: 200px auto 0;
-  display: block;
-  position: relative; }
-
-@keyframes bounce {
-  0%, 20%, 60%, 100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0); }
-  40% {
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px); }
-  80% {
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px); } }
-header .scroll:hover {
-  animation: bounce 1s;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  outline-color: rgba(255, 255, 255, 0);
-  outline-offset: 15px; }
-
-.main__section--our-service h2 {
-  /* Style for "our servic" */
-  color: #222222;
-  font-family: Raleway, sans-serif;
-  font-size: 35px;
-  font-weight: 700;
-  line-height: 60px;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 100px auto 65px; }
-.main__section--our-service hr {
-  /* Style for "Line sep" */
-  width: 86px;
-  height: 2px;
-  background-color: #222222;
-  margin: 0 auto 60px;
-  text-align: center; }
-.main__section--our-service-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  max-width: 1150px;
-  margin: auto; }
-  .main__section--our-service-container div {
-    padding: 20px;
-    max-width: 333px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    color: #222222;
-    font-family: Lato, sans-serif;
-    font-weight: 400;
-    text-align: center; }
-    .main__section--our-service-container div h5 {
-      font-size: 24px;
-      line-height: 24px; }
-    .main__section--our-service-container div p {
-      font-size: 16px;
-      line-height: 30px; }
-
-.main__section--dolore {
-  background: url("../images/-img-.png") 50% no-repeat, #222222;
-  background-size: cover;
-  min-height: 500px; }
-  .main__section--dolore-border {
-    max-width: 1080px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: auto;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    padding: 0 50px; }
-
-.left {
-  padding-top: 170px; }
-  .left h1 {
-    max-width: 560px;
-    color: #ffffff;
-    font-family: Lato, sans-serif;
-    font-size: 45px;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin: 0;
-    letter-spacing: 0.6px;
-    display: block; }
-  .left p {
-    /* Style for "Lorem ipsu" */
-    max-width: 516px;
-    min-height: 78px;
-    color: #ffffff;
-    font-family: Lato, sans-serif;
-    font-size: 22px;
-    font-weight: 100;
-    line-height: 28px;
-    margin-bottom: 70px; }
-  .left a {
-    /* Style for "more" */
-    width: 42px;
-    height: 13px;
-    color: #ffffff;
-    font-family: Lato, sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 28px;
-    text-decoration: underline; }
-
-.right {
-  padding-top: 75px;
-  display: flex;
-  justify-content: center;
-  justify-items: end;
-  flex-grow: 1; }
-  .right img {
-    width: 257px;
-    height: 425px; }
-
-.main__section--our-work {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto; }
-  .main__section--our-work h2 {
-    color: #222222;
-    font-family: Raleway, sans-serif;
-    font-size: 35px;
-    font-weight: 700;
-    line-height: 60px;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 100px auto 65px; }
-  .main__section--our-work hr {
-    width: 86px;
-    height: 2px;
-    background-color: #222222;
-    margin-bottom: 75px; }
-
-.our-work__conteiner {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  flex-wrap: wrap; }
-
-.our-work__card {
-  background-color: #222222;
-  width: 370px;
-  height: 420px;
-  position: relative;
-  margin: 15px;
-  z-index: 1; }
-  .our-work__card a {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 1; }
-
-.title__hidden {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 5;
-  visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto; }
-  .title__hidden p {
-    position: relative;
-    display: block;
-    color: #ffffff;
-    font-family: Lato, sans-serif;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 60px;
-    text-transform: uppercase; }
-  .title__hidden .title__logo {
-    /* Style for "Link 1. At" */
-    width: 41px;
-    height: 41px;
-    opacity: 0.9;
-    position: relative; }
-
-.our-work__card:hover .fon {
-  opacity: 0.3;
-  transition: opacity .2s ease-in; }
-
-.our-work__card > a:hover .title__hidden {
-  visibility: visible;
-  transition: visibility .2s ease-in; }
-
-.main__section--our-work button {
-  /* Style for "Rectangle" */
-  width: 370px;
-  height: 60px;
-  border: 3px solid #222222;
-  margin: 79px auto 0;
-  background-color: white;
-  /* Style for "more" */
-  color: #222222;
-  font-family: Lato, sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 60px;
-  text-transform: uppercase;
-  letter-spacing: 1.7px; }
-
-footer {
-  /* Style for "bg" */
-  background: url("../images/bg-footer.png") 50% no-repeat;
-  min-height: 802px;
-  background-size: cover; }
-
-/*# sourceMappingURL=main.css.map */
+Backtrace:
+main.scss:11:in `h2'
+main.scss:11
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:98:in `block in with_mixin'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:98:in `with_mixin'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `map'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `map'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin.rb:82:in `update_stylesheets'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/bin/scss:13:in `<top (required)>'
+C:/Ruby23-x64/bin/scss:22:in `load'
+C:/Ruby23-x64/bin/scss:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'h2'.\A         on line 11 of main.scss, in `h2'\A         from line 11 of main.scss\A \A 6: \A 7: .main__section--our-service {\A 8:   //min-height: 735px;\A 9:   h2 {\A 10:     /* Style for \"our servic\" */\A 11:     @include h2;\A 12: \A 13:   }\A 14:   hr {\A 15:     /* Style for \"Line sep\" */\A 16:     @include hr;"; }
